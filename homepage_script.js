@@ -110,7 +110,7 @@ function getWeatherDetails(name,lat,lon,country,state){
                     <div class="sunrise-sunset">
                         <div class="item">
                             <div class="icon">
-                                <img src="C:/Users/dhruv/OneDrive/Desktop/SKYSENCE/sunrise.png" alt="sunrise" height="80" width="80">
+                                <img src="sunrise.png" alt="sunrise" height="80" width="80">
                             </div>
                             <div>
                                 <p>Sunrise</p>
@@ -119,7 +119,7 @@ function getWeatherDetails(name,lat,lon,country,state){
                         </div>
                         <div class="item">
                             <div class="icon">
-                                <img src="C:/Users/dhruv/OneDrive/Desktop/SKYSENCE/sunset.png" alt="sunset" height="80" width="80">
+                                <img src="sunset.png" alt="sunset" height="80" width="80">
                             </div>
                             <div>
                                 <p>Sunset</p>
