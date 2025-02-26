@@ -114,7 +114,7 @@ function getWeatherDetails(name,lat,lon,country,state){
                             </div>
                             <div>
                                 <p>Sunrise</p>
-                                <h2>${SRiseTime}</h2>
+                                <h2>${sRiseTime}</h2>
                             </div>
                         </div>
                         <div class="item">
