@@ -99,7 +99,7 @@ function getWeatherDetails(name,lat,lon,country,state){
                     <p><i class="fa-solid fa-location-dot"></i>${name}, ${country}</p>
                 </div>
            `;
-        let{sunrise,sunset}  = data.sys,
+       let{sunrise,sunset}  = data.sys,
         {timezone}=data
         sRiseTime = moment.utc(sunrise, 'X').add(timezone, 'seconds').format('hh:mm A');
         sSetTime = moment.utc(sunset, 'X').add(timezone, 'seconds').format('hh:mm A');
@@ -110,7 +110,7 @@ function getWeatherDetails(name,lat,lon,country,state){
                     <div class="sunrise-sunset">
                         <div class="item">
                             <div class="icon">
-                                <img src=""C:/Users/dhruv/OneDrive/Desktop/SKYSENCE/sunrise.png"" alt="sunrise" height="80" width="80">
+                                <img src="C:\Users\dhruv\OneDrive\Desktop\SKYSENCE\sunrise.png" alt="sunrise" height="80" width="80">
                             </div>
                             <div>
                                 <p>Sunrise</p>
@@ -119,7 +119,7 @@ function getWeatherDetails(name,lat,lon,country,state){
                         </div>
                         <div class="item">
                             <div class="icon">
-                                <img src=""C:/Users/dhruv/OneDrive/Desktop/SKYSENCE/sunset.png"" alt="sunset" height="80" width="80">
+                                <img src="C:\Users\dhruv\OneDrive\Desktop\SKYSENCE\sunset.png" alt="sunset" height="80" width="80">
                             </div>
                             <div>
                                 <p>Sunset</p>
@@ -127,6 +127,7 @@ function getWeatherDetails(name,lat,lon,country,state){
                             </div>
                         </div>
                     </div>
+        `
         `
     }).catch(() => {
         alert('Failed to catch Current Weather')
