@@ -128,7 +128,6 @@ function getWeatherDetails(name,lat,lon,country,state){
                         </div>
                     </div>
         `
-        `
     }).catch(() => {
         alert('Failed to catch Current Weather')
     })
