@@ -6,9 +6,9 @@ fiveDaysForecastCard=document.querySelector(' .day-forecast');
 aqiCard = document.querySelectorAll(' .highlights .card')[0];
 sunriseCard = document.querySelectorAll(' .highlights .card')[1];
 humidityVal = document.getElementById('humidityVal');
-pressureVal = document.getElementById('pressureVal');
-visibilityVal = document.getElementById('visibilityVal');
-windSpeedVal = document.getElementById('windSpeedVal');
+pressureVal = document.getElementById('pressureval');
+visibilityVal = document.getElementById('visibility');
+windSpeedVal = document.getElementById('windspeedval');
 feelsVal = document.getElementById('feelsVal');
 aqiList=['Good','Fair','Moderate','Poor','Very Poor'];
 function getWeatherDetails(name,lat,lon,country,state){
@@ -105,8 +105,8 @@ function getWeatherDetails(name,lat,lon,country,state){
                 </div>
            `;
        let{sunrise,sunset}  = data.sys,
-        {timezone,visibility}=data,
-        {humidity,pressure,feels_like}= data.main,
+        {timezone, visibility} = data,
+        {humidity, pressure, feels_like} = data.main,
         {speed} = data.wind,
         sRiseTime = moment.utc(sunrise, 'X').add(timezone, 'seconds').format('hh:mm A');
         sSetTime = moment.utc(sunset, 'X').add(timezone, 'seconds').format('hh:mm A');
@@ -135,11 +135,11 @@ function getWeatherDetails(name,lat,lon,country,state){
                         </div>
                     </div>
         `;
-        humidityVal.innerHTML = '${humidity}%';
-        pressureVal.innerHTML = '${pressure}hPa';
-        visiabilityVal.innerHTML = '${visibility / 1000}km';
-        windSpeedVal.innerHTML = '${speed}m/s';
-        feelsVal.innerHTML = '${(feels_like - 273.15).tofixed(2)}&deg;C';
+        humidityVal.innerHTML = `${humidity}%`;
+        pressureVal.innerHTML = `${pressure}hPa`;
+        visibilityVal.innerHTML = `${visibility / 1000}km`;
+        windSpeedVal.innerHTML = `${speed}m/s`;
+        feelsVal.innerHTML = `${(feels_like - 273.15).toFixed(2)}&deg;C`;
         
     }).catch(() => {
         alert('Failed to catch Current Weather')
